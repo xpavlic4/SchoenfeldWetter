@@ -58,7 +58,7 @@ public class ForecastFragment extends Fragment {
         super.onCreate(savedInstanceState);
         // Add this line in order for this fragment to handle menu events.
         setHasOptionsMenu(true);
-
+        new FetchWeatherTask().execute("");
 
     }
 
@@ -88,13 +88,7 @@ public class ForecastFragment extends Fragment {
 
         // Create some dummy data for the ListView.  Here's a sample weekly forecast
         String[] data = {
-                "Mon 6/23 - Sunny - 31/17",
-                "Tue 6/24 - Foggy - 21/8",
-                "Wed 6/25 - Cloudy - 22/17",
-                "Thurs 6/26 - Rainy - 18/11",
-                "Fri 6/27 - Foggy - 21/10",
-                "Sat 6/28 - TRAPPED IN WEATHERSTATION - 23/18",
-                "Sun 6/29 - Sunny - 20/7"
+                "No data yet",
         };
         List<String> weekForecast = new ArrayList<String>(Arrays.asList(data));
 
