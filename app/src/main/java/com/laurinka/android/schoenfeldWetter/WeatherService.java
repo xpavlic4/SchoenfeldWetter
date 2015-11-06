@@ -22,6 +22,7 @@ public class WeatherService {
         return this;
     }
     URL build() throws MalformedURLException {
+        base += "&appid=" + BuildConfig.OPEN_WEATHER_MAP_API_KEY;
         return new URL(base);
     }
 }
